@@ -6,7 +6,7 @@ const passport = require("passport");
 const passportJWT = require("./config/passport-jwt-strategy");
 
 const app = express();
-
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => res.send("Hello"));
